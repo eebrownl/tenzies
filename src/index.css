@@ -10,6 +10,36 @@ body {
 
 main {
   background-color: #F5F5F5;
-  height: 90vh;
+  height: 94vh;
   border-radius: 6px;
+  padding: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.die {
+  background-color: #FFFFFF;
+  color: #2B283A;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  box-shadow: 0 4px rgba(0, 0, 0, .2);
+  cursor: pointer;
+
+}
+
+.dice-holder {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  max-width: 400px;
+}
+
+.die-num {
+  font-size: 2rem;
 }
