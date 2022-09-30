@@ -5,13 +5,21 @@ import React from 'react'
 import { nanoid } from 'nanoid'
 
 function App() {
-  const [dice, setDice] = React.useState(allNewDice())
+  const [dice, setDice] = React.useState(() => allNewDice())
 
   const diceElements = dice.map(die => {
-    return <Dice value={die.value} isHeld={die.isHeld} key={die.id}
+    return <Dice value={die.value} isHeld={die.isHeld} key={die.id} holdDice={() => holdDice(die.id)} id={die.id}
     />
   })
-  console.log(dice)
+  
+  function holdDice(id) {
+    setDice(oldDice => oldDice.map(die => {
+        return die.id === id ? 
+            {...die, isHeld: !die.isHeld} :
+            die
+    }))
+}
+  
 
   function allNewDice() {
     let diceArray=[]

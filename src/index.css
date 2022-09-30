@@ -22,7 +22,6 @@ main {
 }
 
 .die {
-  background-color: #FFFFFF;
   color: #2B283A;
   height: 50px;
   width: 50px;
@@ -64,3 +63,4 @@ main {
 .roll-button:active {
   box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
 }
+
