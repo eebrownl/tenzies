@@ -64,3 +64,15 @@ main {
   box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
 }
 
+.instructions {
+  max-width: 300px;
+  margin-bottom: 50px;
+  color:#2B283A;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.title {
+  color: #2B283A;
+  margin-bottom: 10px;
+}
