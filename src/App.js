@@ -33,7 +33,11 @@ function App() {
   }
 
   function rollDice() {
-    setDice(allNewDice())
+    setDice(prevDice => prevDice.map(die => {
+      return die.isHeld === true ? 
+      die :
+      {...die, value: (Math.floor(Math.random() * 6) + 1)}
+    }))
   } 
 
   return (
